@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.5.1.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <script src="JqueryAssignment-2.js"></script>
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <form action="" class="rForm" id="rForm" method="get">
+      <fieldset>
+        <legend><b>Register</b></legend>
+        <p>
+          <label for="username"> Username </label>
+          <input type="text" id="username" name="username" />
+        </p>
+        <p>
+          <label for="password"> Password </label>
+          <input type="password" id="password" name="password" />
+        </p>
+        <p>
+          <label for="confirmPassword"> Confirm Password </label>
+          <input type="password" id="confirmPassword" name="confirmPassword" />
+        </p>
+        <p>
+          <label for="email"> Email </label>
+          <input type="email" id="email" name="email" />
+        </p>
+        <p>
+          <label for="phoneNumber"> Phone Number </label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" />
+        </p>
+        <p>
+          <label for="skills"> Skills </label>
+          <input list="skill" id="skills" name="skills" />
+          <datalist id="skill">
+            <option value="PHP"></option>
+            <option value="FET"></option>
+            <option value="PYTHON">PYTHON</option>
+            <option value="DEVOPS"></option>
+            <option value="DOTNET"></option>
+            <option value="JAVA"></option>
+          </datalist>
+        </p>
+        <p>
+          <label for="city"> City </label>
+          <select id="city" name="city">
+            <option value="Pune">Pune</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Gandhinagar">Gandhinagar</option>
+            <option value="Hydrabad">Hydrabad</option>
+          </select>
+        </p>
+
+        <p>
+          <input type="submit" class="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+    <script>
+      $("#rForm").validate({
+        rules: {
+          username: {
+            minlength: 3,
+            required: true,
+          },
+          password: {
+            minlength: 8,
+            required: true,
+          },
+          confirmPassword: {
+            required: true,
+            equalTo: "#password",
+          },
+          phoneNumber: {
+            required: true,
+          },
+          skill: {
+            required: true,
+          },
+          city: {
+            required: true,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

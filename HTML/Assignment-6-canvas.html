@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="myCanvas" width="500" height="500">
+      This example requires HTML5 canvas support
+    </canvas>
+
+    <script>
+      var myCanvas = document.getElementById("myCanvas");
+      var context = myCanvas.getContext("2d");
+
+      function drawPic(imgSrc, xCord, yCord) {
+        let img = new Image();
+        img.onload = () => {
+          context.drawImage(img, xCord, yCord, 100, 100);
+        };
+        img.src = imgSrc;
+      }
+
+      drawPic("laptop.jpg", 0, 0);
+      drawPic("ipad.jpg", 0, 75);
+      drawPic("SMart-phone.jpg", 0, 300);
+    </script>
+  </body>
+</html>

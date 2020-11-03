@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="jquery-3.5.1.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <script src="JqueryAssignment-2.js"></script>
+    <link rel="stylesheet" href="BOOTSTRAP_WORKSHOP.css" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <form class="container rForm" id="rForm" method="get">
+      <fieldset>
+        <h2>Register</h2>
+        <p>
+          <label class="col-sm-3 control-label" for="firstname"
+            >Firstname*
+          </label>
+          <input
+            class="col-sm-9"
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Firstname"
+          />
+        </p>
+        <p>
+          <label class="col-sm-3 control-label" for="lastname"
+            >Lastname*
+          </label>
+          <input
+            class="col-sm-9"
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Lastname"
+          />
+        </p>
+        <p>
+          <label class="col-sm-3 control-label" for="email"> Email* </label>
+          <input
+            class="col-sm-9"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+        </p>
+        <p>
+          <label class="col-sm-3 control-label" for="password">
+            Password*
+          </label>
+          <input
+            class="col-sm-9"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+        </p>
+        <p>
+          <label class="col-sm-5 control-label" for="confirmPassword">
+            Confirm Password*
+          </label>
+          <input
+            class="col-sm-9"
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Password"
+          />
+        </p>
+        <p>
+          <label class="col-sm-4 control-label" for="dateOfBirth">
+            Date of Birth*</label
+          >
+          <input
+            class="col-sm-9"
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
+            placeholder="mm/dd/yy"
+          />
+        </p>
+        <p>
+          <label class="col-sm-4 control-label" for="phoneNumber">
+            Phone Number
+          </label>
+          <input
+            class="col-sm-9"
+            type="number"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="90XXXXXXXX"
+          /><br />
+          your phone number wont be disclosed anywhere
+        </p>
+        <p>
+          <label class="col-sm-3 control-label" for="height"> Height* </label>
+          <input
+            class="col-sm-9"
+            type="number"
+            id="height"
+            name="height"
+            placeholder="Please write your height in centimeters"
+          />
+        </p>
+        <p>
+          <label class="col-sm-3 control-label" for="weight"> Weight* </label>
+          <input
+            class="col-sm-9"
+            type="number"
+            id="weight"
+            name="weight"
+            placeholder="Please write your weight in kilograms"
+          />
+        </p>
+        <p>
+          <label class="col-sm-3 gender" for="gender">Gender</label>
+          <br />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" />
+        </p>
+        <p>* required fields</p>
+        <p>
+          <button type="submit" class="btn btn-primary btn-block">
+            Register
+          </button>
+        </p>
+      </fieldset>
+    </form>
+    <script>
+      $("#rForm").validate({
+        rules: {
+          firstname: {
+            minlength: 3,
+            required: true,
+          },
+          lastname: {
+            minlength: 3,
+            required: true,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+          password: {
+            minlength: 8,
+            required: true,
+          },
+          confirmPassword: {
+            required: true,
+            equalTo: "#password",
+          },
+          dateOfBirth: {
+            required: true,
+          },
+          height: {
+            required: true,
+            number: true,
+          },
+          weight: {
+            required: true,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

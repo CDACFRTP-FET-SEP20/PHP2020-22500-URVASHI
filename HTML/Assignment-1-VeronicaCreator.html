@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form of Veronica Creators</title>
+  </head>
+  <body>
+    <form>
+      <table id="registraion_table">
+        <h1>Registration</h1>
+        <p>Please fill in this form to create an account.</p>
+
+        <tr>
+          <td>Name</td>
+          <td>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Phone Number</td>
+          <td>
+            <input
+              type="tel"
+              id="telephone"
+              placeholder="90xxxxxxxx"
+              pattern="[1-9]{1}[0-9]{9}"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>E-mail</td>
+          <td>
+            <input
+              type="email"
+              id="mail"
+              placeholder="cyb@cyabge.com"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Password</td>
+          <td>
+            <input
+              type="password"
+              id="pass"
+              placeholder="Enter Password"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Repeat Password</td>
+          <td>
+            <input
+              type="password"
+              id="rep-pass"
+              placeholder="Enter Password Again"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Booking date</td>
+          <td>
+            <input
+              type="date"
+              id="booking_date"
+              placeholder="05-12-97"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Payment method</td>
+          <td>
+            <select name="payment_method" id="payment_method" required>
+              <option value="g-pay">GooglePay</option>
+              <option value="phone-pay">PhonePay</option>
+              <option value="paytm">Paytm</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Account Number</td>
+          <td>
+            <input
+              type="tel"
+              id="accountNumber"
+              placeholder="9049xxxxxxxxxxxx"
+              pattern="[1-9][0-9]{15}"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="submit" id="register" value="Register" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

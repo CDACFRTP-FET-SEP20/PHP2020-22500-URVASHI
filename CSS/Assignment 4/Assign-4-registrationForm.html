@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGISTRATION FORM CSS</title>
+    <link rel="stylesheet" href="Assign-4-registrationForm.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">
+        <lable class="grid-lable" for="empid">Employee ID</lable>
+        <div>
+          <input
+            type="number"
+            id="empid"
+            placeholder="Enter employee ID"
+            pattern="[10001-15000]{5}"
+            required
+          />
+          10001-15000
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <lable class="grid-lable" for="firstname">First Name</lable>
+        <input
+          type="text"
+          id="firstname"
+          placeholder="Enter First Name"
+          required
+        />
+      </div>
+
+      <div class="grid-item">
+        <lable class="grid-lable" for="lastname">Last Name</lable>
+        <input
+          type="text"
+          id="lastname"
+          placeholder="Enter Last Name"
+          required
+        />
+      </div>
+
+      <div class="grid-item">
+        <lable class="grid-lable" for="department">Department</lable>
+        <div class="radio">
+          <lable for="it">IT</lable>
+          <input type="radio" id="it" name="department" value="IT" />
+          <br />
+          <lable for="hr">HR</lable>
+          <input type="radio" id="hr" name="department" value="HR" />
+          <br />
+          <lable for="finance">Finance</lable>
+          <input type="radio" id="finance" name="department" value="Finance" />
+          <br />
+          <lable for="admin">Admin</lable>
+          <input type="radio" id="admin" name="department" value="Admin" />
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <lable class="grid-lable" for="date">Date</lable>
+        <input type="date" id="date" placeholder="mm/dd/yy" required />
+      </div>
+
+      <div class="grid-item">
+        <lable class="grid-lable" for="email">Email</lable>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your Email"
+          required
+        />
+      </div>
+
+      <div class="grid-item">
+        <lable class="grid-lable" for="phone">Mobile no.</lable>
+        <input type="tel" id="phone" placeholder="90xxxxxxxx" required />
+      </div>
+
+      <div class="grid-item">
+        <lable class="grid-lable" for="address">Address</lable>
+        <input
+          type="text"
+          id="address"
+          placeholder="Enter your Address"
+          required
+        />
+      </div>
+
+      <div class="grid-item">
+        <lable class="grid-lable" for="programAttended"
+          >Training Programming to be attended</lable
+        >
+        <div class="checkbox">
+          <lable for="webBasics">Web Basics</lable>
+          <input
+            type="checkbox"
+            id="webBasics"
+            name="programAttended"
+            value="Web Basics"
+          />
+          <br />
+          <lable for="c#">C#</lable>
+          <input type="checkbox" id="c#" name="programAttended" value="C#" />
+          <br />
+          <lable for="entityFramework">Entity Framework</lable>
+          <input
+            type="checkbox"
+            id="entityFramework"
+            name="programAttended"
+            value="Entity Framework"
+          />
+          <br />
+          <lable for="asp.netMVC">ASP.NET MVC</lable>
+          <input
+            type="checkbox"
+            id="asp.netMVC"
+            name="programAttended"
+            value="ASP.NET MVC"
+          />
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" id="register" value="Register" />
+        <input type="submit" id="cancel" value="Cancel" />
+      </div>
+    </div>
+  </body>
+</html>

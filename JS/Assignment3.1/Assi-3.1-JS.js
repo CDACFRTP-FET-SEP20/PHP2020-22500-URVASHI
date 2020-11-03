@@ -1,0 +1,12 @@
+var myDate = new Date();
+var hrs = myDate.getHours();
+
+var greet;
+
+if (hrs < 12 && hrs >= 5) greet = "Good Morning";
+else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
+else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
+
+document.getElementById("greetingLabel").innerHTML = `<b>${greet}</b>`; //for printing greet
+
+document.getElementById("demo").innerHTML = myDate;

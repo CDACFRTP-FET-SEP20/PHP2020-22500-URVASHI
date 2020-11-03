@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Book</title>
+    <style>
+      .formAddBook {
+        background-color: coral;
+        width: 100%;
+        height: 100%;
+        border: black;
+        border: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="formAddBook">
+      <lable for="listItem"><b>Book Name </b></lable>
+      <br />
+
+      <input
+        type="text"
+        name="item"
+        id="item"
+        placeholder="Enter Book name"
+        required
+      />
+      <br />
+      <br />
+      <button>Add Book</button><br /><br />
+
+      <ul></ul>
+      <script>
+        const list = document.querySelector("ul");
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+
+        button.onclick = function () {
+          let myItem = input.value;
+          input.value = "";
+
+          let delBut = " Delete Book";
+
+          const listItem = document.createElement("li");
+          const listText = document.createElement("span");
+          const listBtn = document.createElement("button");
+
+          listItem.appendChild(listText);
+          listText.textContent = myItem;
+          listItem.appendChild(listBtn);
+          listBtn.textContent = delBut;
+          list.appendChild(listItem);
+
+          listBtn.onclick = function (e) {
+            list.removeChild(listItem);
+          };
+        };
+      </script>
+    </form>
+  </body>
+</html>

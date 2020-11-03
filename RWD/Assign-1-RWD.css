@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+} /*for removing dot before the links*/
+
+.container {
+  display: flex; /*for moving element flexibly*/
+  flex-direction: column; /*column: for column manner || row: for row manner*/
+  /*height: 100vh; /*for covering whole screen height of any device*/
+  width: 100%; /*for covering whole screen width of any device*/
+  margin: 0 auto; /*for taking out given margin*/
+}
+
+.container header {
+  box-shadow: 0px 1px 3px gray;
+  /*first attribute:right&left side effect||
+  second attribute:effect only in down side or shadow under box||
+  third attribute:shadow under whole box*/
+  background-color: white;
+  width: 100%;
+  height: 5%;
+}
+
+.container .headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .headerContainer .logo img {
+  /* box-shadow: 0px 1px 3px gray;
+  padding: 0.1%;
+  
+  height: 100%;
+  width: 5%;
+  */
+  display: flex;
+  flex-direction: row;
+  float: left;
+  height: 10%;
+  width: 10%;
+  padding: 1%;
+}
+
+.navContainer ul li a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.container .headerContainer .navContainer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  float: right;
+}
+
+.container .headerContainer .navContainer ul li a {
+  display: block;
+  font-size: 100%;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkblue;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 37px 19px 25px;
+  border-bottom: 6px solid transparent;
+  float: left;
+  text-align: center;
+}
+
+.container .center {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.container .center .asideContainer ul {
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 100%;
+  padding: 10%;
+}
+
+.container .center .asideContainer {
+  display: block;
+  background-color: gray;
+  width: 30%;
+}
+
+.container .asideContainer li {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 100%;
+  padding: 10%;
+}
+
+.center .sectionContainer {
+  width: 70%;
+  float: right;
+  column-count: 3;
+}
+.container .sectionContainer p {
+  width: 100%;
+}
+
+@media all and (max-width: 800px) {
+  .container .headerContainer .navContainer ul {
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+  }
+  .navContainer a {
+    float: none;
+    width: 100%;
+  }
+
+  .container .center .asideContainer ul {
+    text-align: center;
+  }
+  .container .headerContainer .logo img {
+    float: center;
+    padding: 5%;
+    height: 100%;
+    width: 30%;
+  }
+
+  .container .headerContainer .navContainer ul li a {
+    padding: 10px;
+  }
+  .container .center .sectionContainer {
+    column-count: 1;
+  }
+}

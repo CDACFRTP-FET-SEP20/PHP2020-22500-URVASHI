@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas width="300px" height="300px" id="smileOnCanvas">
+      not suppoted
+    </canvas>
+
+    <script>
+      var canvas = document.getElementById("smileOnCanvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(75, 75, 50, 0, Math.PI * 2); // Outer circle
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(65, 65);
+        ctx.fillStyle = "black";
+        ctx.arc(60, 65, 5, 0, Math.PI * 2); // Left eye
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.moveTo(95, 65);
+        ctx.fillStyle = "black";
+        ctx.arc(90, 65, 5, 0, Math.PI * 2); // Right eye
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.moveTo(110, 75);
+        ctx.arc(75, 75, 35, 0, Math.PI); // Mouth (clockwise)
+
+        ctx.stroke();
+      }
+    </script>
+  </body>
+</html>
